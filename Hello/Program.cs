@@ -17,7 +17,3 @@ if(movies !=null)
         Console.WriteLine("No Movies Present");
     }
 
-
-
-
-
