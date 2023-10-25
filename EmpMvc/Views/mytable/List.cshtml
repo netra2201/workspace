@@ -1,0 +1,43 @@
+@using System.Data
+
+@model DataTable
+
+ 
+
+<h1>Salary Listing</h1>
+
+<hr>
+
+<table class = "table">
+
+    <th>Id</th>
+
+    <th>Name</th>
+
+    <th>Salary</th>
+
+    <tbody>
+
+        @foreach(DataRow dr in Model.Rows)
+
+        {
+
+            <tr>
+
+                <td>@dr["id"]</td>
+
+                <td>@dr["name"]</td>
+
+                <td>@dr["salary"]</td>
+
+                <td> @Html.ActionLink("Display","Display","Product",new{id=@dr["Id"]})</td>
+
+ 
+
+            </tr>
+
+        }
+
+    </tbody>
+
+</table>

@@ -1,0 +1,16 @@
+@using System.Data;
+@model DataTable;
+
+@{DataRow dr = Model.Rows[0];}
+<h2>Info of Employee </h2>
+
+<h3>@dr["id"]</h3>
+<h3>@dr["name"]</h3>
+<h3>@dr["salary"]</h3>
+
+<br>
+<br>
+<br>
+
+@Html.ActionLink("Back To List","List")
+<hr>
